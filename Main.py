@@ -198,7 +198,7 @@ servicios_acum = np.cumsum(Servicios)
 
 while num < max(servicios_acum):
     
-    num = funcion_descargar_productos(num, Servicios, servicios_acum, 4)
+    num = funcion_descargar_productos(num, Servicios, servicios_acum, 0)
     driver.switch_to.default_content()
     driver.execute_cdp_cmd("Page.stopLoading", {})
     driver.refresh()
